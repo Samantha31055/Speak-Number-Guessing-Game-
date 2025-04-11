@@ -19,7 +19,7 @@ recognition.start();
 // Capture user speak
 function onSpeak(event) {
   const msg = event.results[0][0].transcript;  // You can log the event to view the structure of the data
-  writeMessage(msg);
+  console.log(msg);
 }
 
 // Speak result
