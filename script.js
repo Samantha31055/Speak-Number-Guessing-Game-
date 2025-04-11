@@ -16,6 +16,7 @@ let recognition = new window.SpeechRecognition();
 // Start recognition and game
 recognition.start();
 
+recognition.addEventListener('end', () => recognition.start());
 // Capture user speak
 function onSpeak(event) {
   const msg = event.results[0][0].transcript;  // You can log the event to view the structure of the data
